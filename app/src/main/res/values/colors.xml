@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#EEEEEE</color>
+
+    <!-- light mode: https://coolors.co/bb6464-cdb699-c3dbd9-a2c2c0-eeeeee -->
     <color name="red_light">#BB6464</color>
     <color name="beige_light">#CDB699</color>
     <color name="blue_light">#C3DBD9</color>
     <color name="opal_light">#A2C2C0</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#EEEEEE</color>
 
-    <color name="red_dark">#BB6464</color>
-    <color name="beige_dark">#CDB699</color>
-    <color name="blue_dark">#C3DBD9</color>
-    <color name="opal_dark">#C8F2EF</color>
+    <!-- dark mode: https://coolors.co/340404-534534-3f5856-3f6a67-eeeeee -->
+    <color name="red_dark">#340404</color>
+    <color name="beige_dark">#534534</color>
+    <color name="blue_dark">#3F5856</color>
+    <color name="opal_dark">#3F6A67</color>
 </resources>
-
-<!-- light mode: https://coolors.co/bb6464-cdb699-c3dbd9-a2c2c0-eeeeee -->
-<!-- dark mode: https://coolors.co/340404-534534-3f5856-3f6a67-eeeeee -->
