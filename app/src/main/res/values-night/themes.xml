@@ -1,11 +1,11 @@
 <resources>
     <style name="Theme.Miniprojekt" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/red_dark</item>
-        <item name="colorPrimaryVariant">@color/beige_dark</item>
+        <item name="colorSurface">@color/red_dark</item>
+        <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">@color/opal_dark</item>
         <item name="colorSecondaryVariant">@color/blue_dark</item>
         <item name="colorOnSecondary">@color/white</item>
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
 </resources>
