@@ -28,7 +28,7 @@ class RecipeAdapter() :
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val recipe = this.recipes[position]
         holder.name.text = recipe.name
-        holder.description.text = recipe.description
+
         holder.name.setOnClickListener {
             val intent = Intent(context, RecipeDetailActivity::class.java)
             intent.putExtra("ID", recipe.id)

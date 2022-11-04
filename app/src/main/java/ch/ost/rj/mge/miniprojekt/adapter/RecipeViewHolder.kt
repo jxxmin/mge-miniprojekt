@@ -7,10 +7,8 @@ import ch.ost.rj.mge.miniprojekt.R
 
 class RecipeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val name: TextView
-    val description: TextView
 
     init {
         name = view.findViewById(R.id.recipe_name)
-        description = view.findViewById(R.id.recipe_description)
     }
 }
