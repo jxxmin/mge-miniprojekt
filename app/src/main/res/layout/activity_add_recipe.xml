@@ -18,26 +18,35 @@
         app:layout_constraintTop_toTopOf="parent"
         style="@style/TextAppearance.AppCompat.Title"/>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/recipe_name_input"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/input_wrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/recipe_name_hint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipe_title" />
+        app:layout_constraintTop_toBottomOf="@+id/recipe_title">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/recipe_description_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="@dimen/text_area_min_height"
-        android:inputType="textMultiLine"
-        android:hint="@string/recipe_description_hint"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipe_name_input" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/recipe_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/recipe_name_hint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/recipe_description_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/recipe_description_hint"
+            android:inputType="textMultiLine"
+            android:minHeight="@dimen/text_area_min_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recipe_name_input" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/saveRecipeButton"
