@@ -2,4 +2,6 @@
     <string name="app_name">Meine Rezepte</string>
     <string name="description_add_recipe_button">Button to add new recipe</string>
     <string name="description_switch_dark_mode">Button to switch to dark mode</string>
+    <string name="add_recipe_title">Rezept hinzufügen</string>
+    <string name="recipe_name_hint">Rezept Name</string>
 </resources>
