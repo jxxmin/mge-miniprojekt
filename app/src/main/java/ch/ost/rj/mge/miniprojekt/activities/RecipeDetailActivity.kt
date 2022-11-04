@@ -12,10 +12,10 @@ class RecipeDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_recipe_detail)
 
         val id = this.intent.getIntExtra("ID", -1)
-
         val recipe = RecipeRepository.getRecipeById(id)
 
-        findViewById<TextView>(R.id.recipe_detail_name).text = recipe.name;
+        title = recipe.name
+
         findViewById<TextView>(R.id.recipe_detail_description).text = recipe.description;
     }
 }
