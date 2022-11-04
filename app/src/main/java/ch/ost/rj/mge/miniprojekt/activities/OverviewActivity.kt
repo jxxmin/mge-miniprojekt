@@ -11,24 +11,35 @@ import ch.ost.rj.mge.miniprojekt.services.ThemeService
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class OverviewActivity : AppCompatActivity() {
-    private fun toggleDarkMode() {
-        if (ThemeService.getUsesDarkMode()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            ThemeService.setUsesDarkMode(false)
-        } else {
+    private fun setDarkMode(darkMode: Boolean) {
+        if (darkMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             ThemeService.setUsesDarkMode(true)
+        }
+        else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            ThemeService.setUsesDarkMode(false)
+        }
+    }
+
+    private fun initDarkMode() {
+        val setToDarkMode = ThemeService.getUsesDarkMode()
+
+        if (setToDarkMode && AppCompatDelegate.getDefaultNightMode() != AppCompatDelegate.MODE_NIGHT_YES) {
+            setDarkMode(true);
+        } else if (!setToDarkMode && AppCompatDelegate.getDefaultNightMode() != AppCompatDelegate.MODE_NIGHT_NO) {
+            setDarkMode(false);
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // TODO get uses dark mode from preferences but only on first loading!
         setContentView(R.layout.activity_overview)
+        initDarkMode()
 
         val darkModeButton = findViewById<FloatingActionButton>(R.id.dark_mode_button)
-        darkModeButton.setOnClickListener { toggleDarkMode() }
+        darkModeButton.setOnClickListener { setDarkMode(!ThemeService.getUsesDarkMode()) }
 
         val recyclerView = findViewById<RecyclerView>(R.id.recipes_list)
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
