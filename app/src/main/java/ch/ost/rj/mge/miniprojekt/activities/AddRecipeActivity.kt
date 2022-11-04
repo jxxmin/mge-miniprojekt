@@ -3,6 +3,7 @@ package ch.ost.rj.mge.miniprojekt.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import ch.ost.rj.mge.miniprojekt.R
 import ch.ost.rj.mge.miniprojekt.model.Recipe
 import ch.ost.rj.mge.miniprojekt.model.RecipeRepository
@@ -21,6 +22,7 @@ class AddRecipeActivity : AppCompatActivity() {
         val saveButton = findViewById<Button>(R.id.saveRecipeButton)
         saveButton.setOnClickListener {
             saveRecipe()
+            Toast.makeText(applicationContext, "Rezept wurde gespeichert", Toast.LENGTH_LONG).show()
             finish()
         }
     }
