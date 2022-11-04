@@ -13,7 +13,7 @@ class RecipeApplication : Application() {
         ThemeService.initialize(applicationContext)
 
         // only for testing purposes
-        RecipeRepository.addRecipe(Recipe( "Schoggikuchen", "Nehme Schokolade und viel Mehl, dann mischen und noch ein rohes Ei. Danach beii 400 Grad backen!"))
-        RecipeRepository.addRecipe(Recipe("Chässpätzli", "Spätzle Packung öffnen und in Pfanne mit Käse vermischen."))
+        //RecipeRepository.addRecipe(Recipe( "Schoggikuchen", "Nehme Schokolade und viel Mehl, dann mischen und noch ein rohes Ei. Danach beii 400 Grad backen!"))
+        //RecipeRepository.addRecipe(Recipe("Chässpätzli", "Spätzle Packung öffnen und in Pfanne mit Käse vermischen."))
     }
 }

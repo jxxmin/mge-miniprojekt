@@ -11,8 +11,8 @@ import com.google.android.material.textfield.TextInputEditText
 class AddRecipeActivity : AppCompatActivity() {
     private fun saveRecipe() {
         val name = findViewById<TextInputEditText>(R.id.recipe_name_input)
-        val description = "";
-        RecipeRepository.addRecipe(Recipe(name.text.toString(), description))
+        val description = findViewById<TextInputEditText>(R.id.recipe_description_input)
+        RecipeRepository.addRecipe(Recipe(name.text.toString(), description.text.toString()))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

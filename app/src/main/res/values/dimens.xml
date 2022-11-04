@@ -4,4 +4,5 @@
     <dimen name="distance_between_controls">8dp</dimen>
     <dimen name="list_item_height">24dp</dimen>
     <dimen name="margin_medium">16dp</dimen>
+    <dimen name="text_area_min_height">128dp</dimen>
 </resources>
