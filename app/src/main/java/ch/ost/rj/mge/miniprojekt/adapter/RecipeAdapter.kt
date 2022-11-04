@@ -21,6 +21,7 @@ class RecipeAdapter() :
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val recipe = this.recipes[position]
         holder.name.text = recipe.name
+        holder.description.text = recipe.description
     }
 
     override fun getItemCount(): Int {
