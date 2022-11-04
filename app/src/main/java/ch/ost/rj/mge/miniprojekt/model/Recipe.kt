@@ -6,4 +6,5 @@ import androidx.room.*;
 data class Recipe(
     @PrimaryKey val id: Int,
     @ColumnInfo(name = "name") val name: String,
+    @ColumnInfo(name = "description") val description: String,
 )
