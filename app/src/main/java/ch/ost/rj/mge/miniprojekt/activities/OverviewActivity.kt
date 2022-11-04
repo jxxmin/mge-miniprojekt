@@ -42,14 +42,23 @@ class OverviewActivity : AppCompatActivity() {
         val darkModeButton = findViewById<FloatingActionButton>(R.id.dark_mode_button)
         darkModeButton.setOnClickListener { setDarkMode(!ThemeService.getUsesDarkMode()) }
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recipes_list)
-        recyclerView.layoutManager = LinearLayoutManager(applicationContext)
-        recyclerView.adapter = RecipeAdapter()
+        this.loadData();
 
         val button = findViewById<FloatingActionButton>(R.id.add_recipe_button)
         button.setOnClickListener{
             val intent = Intent(this, AddRecipeActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        this.loadData();
+    }
+
+    private fun loadData(){
+        val recyclerView = findViewById<RecyclerView>(R.id.recipes_list)
+        recyclerView.layoutManager = LinearLayoutManager(applicationContext)
+        recyclerView.adapter = RecipeAdapter()
     }
 }
