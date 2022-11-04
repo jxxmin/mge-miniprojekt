@@ -1,7 +1,9 @@
 package ch.ost.rj.mge.miniprojekt.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -44,5 +46,11 @@ class OverviewActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recipes_list)
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         recyclerView.adapter = RecipeAdapter()
+
+        val button = findViewById<FloatingActionButton>(R.id.add_recipe_button)
+        button.setOnClickListener{
+            val intent = Intent(this, AddRecipeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
