@@ -4,4 +4,5 @@
     <string name="description_switch_dark_mode">Button to switch to dark mode</string>
     <string name="add_recipe_title">Rezept hinzufügen</string>
     <string name="recipe_name_hint">Rezept Name</string>
+    <string name="button_save">Speichern</string>
 </resources>

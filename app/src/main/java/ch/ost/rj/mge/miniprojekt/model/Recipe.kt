@@ -4,6 +4,8 @@ import androidx.room.*;
 
 @Entity
 data class Recipe(
-    @PrimaryKey val id: Int,
-    @ColumnInfo(name = "name") val name: String,
-)
+    @ColumnInfo(name = "name") val name: String
+) {
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0
+}
