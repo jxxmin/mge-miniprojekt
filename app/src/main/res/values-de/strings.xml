@@ -7,4 +7,5 @@
     <string name="recipe_name_hint">Name</string>
     <string name="button_save">Speichern</string>
     <string name="recipe_description_hint">Beschreibung</string>
+    <string name="add_image_button">Bild hinzufügen</string>
 </resources>

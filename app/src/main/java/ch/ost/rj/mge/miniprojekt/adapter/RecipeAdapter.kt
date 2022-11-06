@@ -4,10 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import ch.ost.rj.mge.miniprojekt.R
-import ch.ost.rj.mge.miniprojekt.activities.AddRecipeActivity
 import ch.ost.rj.mge.miniprojekt.activities.RecipeDetailActivity
 import ch.ost.rj.mge.miniprojekt.model.Recipe
 import ch.ost.rj.mge.miniprojekt.model.RecipeRepository

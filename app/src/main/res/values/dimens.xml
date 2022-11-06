@@ -2,7 +2,9 @@
 <resources>
     <dimen name="distance_from_layout_to_content">8dp</dimen>
     <dimen name="distance_between_controls">8dp</dimen>
-    <dimen name="list_item_height">24dp</dimen>
+    <dimen name="list_item_height">48dp</dimen>
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="text_area_min_height">128dp</dimen>
+    <dimen name="thumbnail_height">40dp</dimen>
+    <dimen name="image_max_height">128dp</dimen>
 </resources>
