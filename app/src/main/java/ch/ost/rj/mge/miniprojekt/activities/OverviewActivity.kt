@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ch.ost.rj.mge.miniprojekt.R
@@ -16,8 +17,7 @@ class OverviewActivity : AppCompatActivity() {
         if (darkMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             ThemeService.setUsesDarkMode(true)
-        }
-        else {
+        } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             ThemeService.setUsesDarkMode(false)
         }
@@ -45,7 +45,7 @@ class OverviewActivity : AppCompatActivity() {
         this.loadData();
 
         val button = findViewById<FloatingActionButton>(R.id.add_recipe_button)
-        button.setOnClickListener{
+        button.setOnClickListener {
             val intent = Intent(this, AddRecipeActivity::class.java)
             startActivity(intent)
         }
@@ -56,9 +56,13 @@ class OverviewActivity : AppCompatActivity() {
         this.loadData();
     }
 
-    private fun loadData(){
+    private fun loadData() {
         val recyclerView = findViewById<RecyclerView>(R.id.recipes_list)
-        recyclerView.layoutManager = LinearLayoutManager(applicationContext)
+        val layoutManager = LinearLayoutManager(applicationContext)
+        val decorator = DividerItemDecoration(baseContext, layoutManager.orientation)
+
+        recyclerView.layoutManager = layoutManager
         recyclerView.adapter = RecipeAdapter()
+        recyclerView.addItemDecoration(decorator)
     }
 }
