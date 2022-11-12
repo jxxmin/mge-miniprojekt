@@ -14,10 +14,13 @@ Die gesammelten Ideen können auch im Darkmode angeschaut werden.
 - Persistenz
   - Rezepte in room database speichern: 1 Punkt
   - Zuletzt verwendeter Modus (dark/light) in preferences speichern: 1 Punkt
+- Ressourcen: Lokalisierung
+  - Übersetzungen in Deutsch / Englisch: 1 Punkt
 - Verwendung von Aktoren
   - Vibrationseffekt beim Speichern: 1 Punkt
 - Unterschiedliche Styles
   - Darkmode: 1 Punkt
 - Ihre eigenen Ideen
   - App Icon hinzugefügt: 1 Punkt
+
 (Obwohl nur 13 Punkte zu erreichen sind, haben wir mit mehr geplant, da die effektive Bewertung ja noch von unseren Vorstellungen abweichen kann)
