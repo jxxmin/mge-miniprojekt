@@ -3,6 +3,7 @@ package ch.ost.rj.mge.miniprojekt.activities
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.OpenableColumns
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
@@ -15,6 +16,8 @@ import ch.ost.rj.mge.miniprojekt.R
 import ch.ost.rj.mge.miniprojekt.model.Recipe
 import ch.ost.rj.mge.miniprojekt.model.RecipeRepository
 import com.google.android.material.textfield.TextInputEditText
+import java.io.File
+import java.io.FileOutputStream
 
 
 class AddRecipeActivity : AppCompatActivity() {
@@ -95,21 +98,45 @@ class AddRecipeActivity : AppCompatActivity() {
         }
     }
 
+    private fun copyImageToInternalStorage(uri: Uri, name: String) {
+        val file = File(filesDir, "/$name")
+        val outputStream = FileOutputStream(file)
+
+        val bytesArr = baseContext.contentResolver.openInputStream(uri)?.use { it.buffered().readBytes() }
+        outputStream.write(bytesArr)
+
+        outputStream.close()
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
         if (requestCode == PICK_IMAGE_CODE && resultCode == RESULT_OK) {
             val uri: Uri? = data?.data
 
             if (uri != null) {
+                val name = getNameOfFile(uri)
+                copyImageToInternalStorage(uri, name)
+
                 val imageView = findViewById<ImageView>(R.id.image)
                 imageView.setImageURI(uri)
 
-                val path = findViewById<TextView>(R.id.image_path)
-                path.text = uri.toString()
+                val pathTextView = findViewById<TextView>(R.id.image_path)
+                val path = filesDir.path + "/" + name
+                pathTextView.text = path
 
                 findViewById<Button>(R.id.add_image_button).isVisible = false
             }
         }
+    }
+
+    private fun getNameOfFile(uri: Uri): String {
+        val returnCursor = contentResolver.query(uri, null, null, null, null)!!
+        val nameIndex = returnCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+
+        returnCursor.moveToFirst()
+        val name = returnCursor.getString(nameIndex)
+        returnCursor.close()
+
+        return name
     }
 }
