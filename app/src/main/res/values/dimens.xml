@@ -5,4 +5,5 @@
     <dimen name="list_item_height">48dp</dimen>
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="text_area_min_height">128dp</dimen>
+    <dimen name="text_detail">16sp</dimen>
 </resources>
