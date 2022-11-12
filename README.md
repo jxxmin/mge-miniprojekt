@@ -12,8 +12,8 @@ Die gesammelten Ideen können auch im Darkmode angeschaut werden.
   - Überblick über alle Rezepte: 1 Punkt
   - Ein einzelnes Rezept anzeigen: 1 Punkt
 - Persistenz
-  - Rezepte speichern: 1 Punkt
-  - Zuletzt verwendeter Modus (Dark/light) speichern: 1 Punkt
+  - Rezepte in room database speichern: 1 Punkt
+  - Zuletzt verwendeter Modus (dark/light) in preferences speichern: 1 Punkt
 - Verwendung von Aktoren
   - Vibrationseffekt beim Speichern: 1 Punkt
 - Unterschiedliche Styles
