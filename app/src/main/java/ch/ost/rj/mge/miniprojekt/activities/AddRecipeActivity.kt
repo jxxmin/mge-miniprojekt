@@ -1,8 +1,12 @@
 package ch.ost.rj.mge.miniprojekt.activities
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
@@ -23,6 +27,8 @@ class AddRecipeActivity : AppCompatActivity() {
 
     companion object {
         const val PICK_IMAGE_CODE = 1
+        const val SHORT_DURATION: Long = 100
+        const val MAX_AMPLITUDE = 255
     }
 
     private fun saveRecipe() {
@@ -36,6 +42,22 @@ class AddRecipeActivity : AppCompatActivity() {
                 imagePath.text.toString()
             )
         )
+
+        this.vibrate()
+    }
+
+    private fun vibrate() {
+        val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            val effectId = VibrationEffect.EFFECT_DOUBLE_CLICK
+            val effect = VibrationEffect.createPredefined(effectId)
+            vibrator.vibrate(effect)
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            vibrator.vibrate(VibrationEffect.createOneShot(SHORT_DURATION, MAX_AMPLITUDE))
+        } else {
+            vibrator.vibrate(SHORT_DURATION)
+        }
     }
 
     private fun updateSaveButton() {
