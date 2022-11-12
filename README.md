@@ -18,5 +18,6 @@ Die gesammelten Ideen können auch im Darkmode angeschaut werden.
   - Vibrationseffekt beim Speichern: 1 Punkt
 - Unterschiedliche Styles
   - Darkmode: 1 Punkt
-
-(Obwohl nur 13 Punkte zu erreichen sind, haben wir mit 14 geplant, da die effektive Bewertung ja noch von unseren Vorstellungen abweichen kann)
+- Ihre eigenen Ideen
+  - App Icon hinzugefügt: 1 Punkt
+(Obwohl nur 13 Punkte zu erreichen sind, haben wir mit mehr geplant, da die effektive Bewertung ja noch von unseren Vorstellungen abweichen kann)
