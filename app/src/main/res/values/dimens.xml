@@ -6,4 +6,5 @@
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="text_area_min_height">128dp</dimen>
     <dimen name="text_detail">16sp</dimen>
+    <dimen name="image_margin">32dp</dimen>
 </resources>
